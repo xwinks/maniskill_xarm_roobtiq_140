@@ -12,13 +12,13 @@ done = False
 start_time = time.time()
 t = 0
 while not done:
-    # action = np.random.randn(1)
+    action = np.random.randn(1)
     # print(t)
     t += 1
     if t < 100:
-        action = np.array([0,0,0,0,0,0,-0.05])
+        action = np.array([0,0,0,0,0,0,0.05])
     else:
-        action = np.array([0,0,0.1,0,0,0,-0.05])
+        action = np.array([0,0,0.1,0,0,0,0.05])
         # import pdb;pdb.set_trace()
     obs, rew, terminated, truncated, info = env.step(action)
     # done = terminated or truncated
